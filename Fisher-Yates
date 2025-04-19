@@ -1,0 +1,13 @@
+import random
+
+def fisher_yates_shuffle(arr):
+    for i in range(len(arr) - 1, 0, -1):
+        j = random.randint(0, i)
+        arr[i], arr[j] = arr[j], arr[i]
+
+# Create a list from 0 to 9
+numbers = list(range(10))
+
+print("Before shuffle:", numbers)
+fisher_yates_shuffle(numbers)
+print("After shuffle: ", numbers)
